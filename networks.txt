@@ -1,0 +1,6 @@
+Run docker in jetson-inference
+Then into aarch64/bin run
+./segnet --network=fcn-resnet18-cityscapes-1024x512 "images/frame_*.jpg" images/test/frames_%i.jpg
+
+
+./detectnet "images/frame_*.jpg" images/test/framed_%i.jpg
