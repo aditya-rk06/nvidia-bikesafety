@@ -34,4 +34,4 @@ finally run the videos file in python on the folder that contains all the merged
 
 Example output
 https://drive.google.com/file/d/1k71YothH72JnaS9Xjy-mSRzKWFdD68i3/view?usp=sharing
-please note that the program was intended for outside use and some images weren't processed by detectnet
+please note that some images weren't processed by detectnet
