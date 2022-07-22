@@ -3,7 +3,7 @@
  Add short description of project here > 
  This is a system that will take mulitple photos during a bicycle journey, then using detectnet and segnet it will highlight people and highlight the bike route. The segnet and detectnet are then merged and every merged photo is chained together to make a video that can then be output. With high computation power the program can be run to almost output live video. This will help make biking safe, by highlighting obstacles in the path avoiding accidents. 
 
-![add image descrition here](direct image link here)
+
 
 ## The Algorithm
 
