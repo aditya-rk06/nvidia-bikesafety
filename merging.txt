@@ -1,0 +1,38 @@
+
+#!/usr/bin/python3
+import jetson.inference
+import jetson.utils
+for i in range(100):
+        from PIL import Image, ImageDraw, ImageFilter
+
+# Front Image
+        filename =( 'framed_' + str(i) +'.jpg')
+
+# Back Image
+        filename1 =('frames_'+str(i)+'.jpg')
+
+# Open Front Image
+        frontImage = Image.open(filename)
+
+# Open Background Image
+        background = Image.open(filename1)
+
+# Convert image to RGBA
+        frontImage = frontImage.convert("RGBA")
+
+# Convert image to RGBA
+        background = background.convert("RGBA")
+#change transparency
+        background.putalpha(200)
+# Calculate width to be at the center
+        width = (background.width - frontImage.width) // 2
+
+# Calculate height to be at the center
+        height = (background.height - frontImage.height) // 2
+
+# Paste the frontImage at (width, height)
+        background.paste(frontImage,(width, height), frontImage)
+
+# Save this image
+        rgb_background=background.convert('RGB')
+        rgb_background.save('merge/' 'merged_' + str(i) + '.jpg', format="jpeg")
